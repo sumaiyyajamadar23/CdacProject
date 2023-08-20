@@ -1,0 +1,35 @@
+<main xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="container body-content span=8 offset=2">
+        <div class="well">
+            <form class="form-horizontal" th:action="@{/admin/albums/delete/{id}(id=${album.id})}" method="post">
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="album_name">Album Name</label>
+                        <div class="col-sm-4 ">
+                            <input type="text" class="form-control" id="album_name" placeholder="Album Name" name="name"
+                                   th:value="${album.name}" disabled="disabled"/>
+                            <img th:src="${album.albumPicture}" width="250" height="150"/>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="album_name">Album Author</label>
+                        <div class="col-sm-4 ">
+                            <input type="text" class="form-control" id="album_author" placeholder="Album Author" name="author"
+                                   th:value="${album.author.fullName}" disabled="disabled"/>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <a class="btn btn-default" th:href="@{/admin/albums/}">Cancel</a>
+                            <input value="Delete" type="submit" class="btn btn-danger"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</main>
