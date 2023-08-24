@@ -26,7 +26,7 @@ function Header() {
               height="30"
               class="rounded float-start d-inline-block align-text-top me-3"
             />
-            <strong>KisanSeva</strong>
+            <strong>Art O' Craft</strong>
           </a>
           <strong>
             <Grommet>
@@ -86,12 +86,12 @@ function Header() {
                     aria-labelledby="navbarDropdownMenuLink"
                   >
                     <li>
-                      <Link className="dropdown-item" to="/farmer-reg">
+                      <Link className="dropdown-item" to="/artist-reg">
                         <strong>Artist</strong>
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/buyer-reg">
+                      <Link className="dropdown-item" to="/customer-reg">
                         <strong>Customer</strong>
                       </Link>
                     </li>
@@ -147,7 +147,7 @@ function Header() {
 
               {sessionStorage.getItem("userType") === "buyer" && (
                 <li className="nav-item">
-                  <a className="nav-link ms-3" href="/buyer-myCart">
+                  <a className="nav-link ms-3" href="/customer-myCart">
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png"
                       style={{ width: "30px", height: "30px" }}

@@ -62,7 +62,7 @@ function ArtistProfile() {
 
     console.log(changeInfo);
     function changeProfile() {
-        //http://localhost:9099/change-profile/farmer/
+        //http://localhost:9099/change-profile/artist/
         const url = "http://localhost:9099/change-profile/" + sessionStorage.getItem('userType') + "/" + sessionStorage.getItem('authenticatedUser')
         axios
             .post(url, {
@@ -93,7 +93,7 @@ function ArtistProfile() {
     };
     console.log(changeInfo);
 
-    const url = "http://localhost:9099/farmer/profile/" + sessionStorage.getItem('authenticatedUser');
+    const url = "http://localhost:9099/artist/profile/" + sessionStorage.getItem('authenticatedUser');
     useEffect(() => {
         axios
             .get(url, {})

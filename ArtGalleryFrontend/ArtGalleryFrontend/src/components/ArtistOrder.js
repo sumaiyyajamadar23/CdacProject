@@ -12,7 +12,7 @@ function Order()
     const [list ,setList] = useState([]);
     useEffect(() => {
         axios
-        .post("http://localhost:9099/farmer/orders", {
+        .post("http://localhost:9099/artist/orders", {
           user_name: username,
         })
         .then((response) => {
@@ -28,15 +28,15 @@ console.log(list);
       function changeStatus(item,e){
 
         const oid = item.oid;
-        const fid = item.farmer.fid;
-        const crop_category =item.crop_category;
+        const fid = item.artist.fid;
+        const crop_category =item.art_category;
         const quantity = item.quantity;
         console.log(fid);
         console.log(oid);
           axios
-          .post("http://localhost:9099/farmer/orders/change-status", {
+          .post("http://localhost:9099/artist/orders/change-status", {
             oid : oid ,
-            farmer : {fid : fid},
+            artist : {fid : fid},
             art_category : art_category,
             quantity : quantity
           })

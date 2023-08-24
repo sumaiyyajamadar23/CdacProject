@@ -37,7 +37,8 @@ function CustomerProfile() {
     }
   }
 
-  function handleCancel() {
+  function handleCancel() 
+  {
     setFirstNameflag(false);
     setLastNameflag(false);
     setEmailflag(false);
@@ -94,7 +95,7 @@ function CustomerProfile() {
   console.log(changeInfo);
 
   const url =
-    "http://localhost:9099/buyer/profile/" +
+    "http://localhost:9099/customer/profile/" +
     sessionStorage.getItem("authenticatedUser");
   useEffect(() => {
     axios

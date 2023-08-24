@@ -12,11 +12,11 @@ function CustomerWelcome(){
        
        
         var handleProduct = ()=>{
-            window.location = `/buyer-product`;
+            window.location = `/customer-product`;
           }
 
           var handleMyCart = ()=>{
-            window.location = `/buyer-myCart`;
+            window.location = `/customer-myCart`;
           }
     
         return(

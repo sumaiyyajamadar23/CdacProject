@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { Alert, AlertTitle } from "@mui/material";
 
-function FarmerReg() {
+function ArtistReg() {
   const myStyle = {
     backgroundImage:
       "url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg')",
@@ -52,7 +52,7 @@ function FarmerReg() {
     console.log("clicked");
     if (isvalid) {
       axios
-        .post("http://localhost:9099/farmer/Registration", {
+        .post("http://localhost:9099/artist/Registration", {
           email: regestration.email,
           firstname: regestration.firstname,
           lastname: regestration.lastname,
@@ -201,7 +201,7 @@ function FarmerReg() {
                               />
                             </div>
                             <div>
-                              <span className="text-danger">{fnameErr}</span>
+                              <span className="text-danger">{artistErr}</span>
                             </div>
                           </div>
 

@@ -52,7 +52,7 @@ function BuyerReg() {
     console.log("clicked")
     if (isvalid) {
       axios
-        .post("http://localhost:9099/buyer/Registration", {
+        .post("http://localhost:9099/customer/Registration", {
 
           email: regestration.email,
           firstname: regestration.firstname,

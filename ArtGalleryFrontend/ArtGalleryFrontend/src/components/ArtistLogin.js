@@ -43,10 +43,10 @@ function ArtistLogin() {
         console.log(response.data);
 
         if (response.data === "pass") {
-          AuthenticateService.farmerLogin(login.user_name);
+          AuthenticateService.artistLogin(login.user_name);
 
           setLogin({ user_name: "", password: "" });
-          window.location = `/farmer-welcome/${login.user_name}`;
+          window.location = `/artist-welcome/${login.user_name}`;
         } else {
           console.log(login.user_name);
           // sethasLoginFailed(true);

@@ -39,7 +39,7 @@ function CustomerCart() {
         quantity: order.quantity,
         total_amount: order.expectedprice,
         status: "unapproved",
-        buyer: { user_name: order.customerusername },
+        customer: { user_name: order.customerusername },
       })
       .then((response) => {
         console.log(response.data);

@@ -87,7 +87,7 @@ function Footer() {
                   </p>
                   <p>
                     <a href="#!" class="text-white">
-                      Crops
+                      Arts
                     </a>
                   </p>
                   <p>

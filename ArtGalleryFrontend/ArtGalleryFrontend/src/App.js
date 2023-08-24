@@ -4,32 +4,32 @@ import "./App.css";
 import Home from "./components/Home/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import FarmerLogin from "./components/ArtistLogin";
-import BuyerLogin from "./components/CustomerLogin";
+import ArtistLogin from "./components/ArtistLogin";
+import customerLogin from "./components/CustomerLogin";
 import AdminLogin from "./components/Admin/AdminLogin";
-import FarmerWelcome from "./components/ArtistWelcome";
-import FarmerReg from "./components/ArtistReg";
-import BuyerReg from "./components/CutomerReg";
+import ArtistWelcome from "./components/ArtistWelcome";
+import ArtistReg from "./components/ArtistReg";
+import CustomerReg from "./components/CutomerReg";
 import Order from "./components/ArtistOrder";
 import Product from "./components/ArtistProduct";
 import ErrorPage from "./components/ErrorPage";
 import CustomProduct from "./components/CustomProduct";
-import BuyerWelcome from "./components/CustomerWelcome";
-import BuyerProduct from "./components/CustomProduct";
-import BuyerCart from "./components/CustomerCart";
+import CustomerWelcome from "./components/CustomerWelcome";
+import CustomerProduct from "./components/CustomProduct";
+import CustomerCart from "./components/CustomerCart";
 import TermsandCondition from "./components/TermsAndCondition";
-import BuyerPay from "./components/CustomerPay";
-import BuyerProfile from "./components/CustomerProfile";
-import FarmerProfile from "./components/CustomerProfile";
+import CustomerPay from "./components/CustomerPay";
+import CustomerProfile from "./components/CustomerProfile";
+import ArtistProfile from "./components/ArtistProfile";
 import AuthenticatedRout from "./components/AuthenticateRout";
 import AdminWelcome from "./components/Admin/AdminWelcome";
 import ForgotPassword from "./components/ForgotPassword";
-import FarmerList from "./components/Admin/ArtistList";
-import BuyerList from "./components/Admin/CustomerList";
-import BuyerUpdate from "./components/Admin/CustomerUpdate";
+import ArtistList from "./components/Admin/ArtistList";
+import CustomerList from "./components/Admin/CustomerList";
+import CustomerUpdate from "./components/Admin/CustomerUpdate";
 import Adminproduct from "./components/Admin/Adminproduct";
 import OrdersList from "./components/Admin/OrdersList";
-import customerLogin from "./components/CustomerLogin";
+import CustomerLogin from "./components/CustomerLogin";
 
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
         <Routes>
           <Route path="/" exact component={Home} />
           <Route path="/artist-login" component={AdminLogin} />
-          <Route path="/customer-login" component={customerLogin} />
+          <Route path="/customer-login" component={CustomerLogin} />
           <Route path="/admin-login" component={AdminLogin} />
           <Route path="/admin-customerupdate" component={CustomerUpdate} />
           <AuthenticatedRout path="/Admin-product" component={Adminproduct} />
@@ -70,7 +70,7 @@ function App() {
             path="/customer-welcome/:username"
             component={CustomerWelcome}
           />
-          <AuthenticatedRout path="/customer-myCart" component={customerCart} />
+          <AuthenticatedRout path="/customer-myCart" component={CustomerCart} />
           <Route path="/terms-condition" component={TermsandCondition} />
           <AuthenticatedRout path="/customer-pay/:payment" component={CustomerPay} />
           <AuthenticatedRout path="/artist/profile" component={ArtistProfile} />

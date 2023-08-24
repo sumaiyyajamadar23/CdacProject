@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Product() {
     const history = useHistory();
     let user = sessionStorage.getItem('authenticatedUser');
-    const [product, setProduct] = useState({ farmer: { user_name: user }, crop: '', quantity: '', expected_Price: '' });
+    const [product, setProduct] = useState({ artist: { user_name: user }, crop: '', quantity: '', expected_Price: '' });
 
 
     var handleChange = (e) => {
@@ -31,7 +31,7 @@ function Product() {
     function confirmProduct() {
 
         axios
-            .post("http://localhost:9099/farmer/add-product", {
+            .post("http://localhost:9099/artist/add-product", {
                 artist: { user_name: user },
                 art: product.art,
                 quantity: product.quantity,

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import AuthenticateService from "./AuthenticateService";
 import axios from 'axios'
 import { Alert, AlertTitle } from "@mui/material";
-function BuyerLogin() {
+function CustomerLogin() {
 
     const myStyle = {
         backgroundImage:
@@ -29,7 +29,7 @@ function BuyerLogin() {
         e.preventDefault();
 
         axios
-            .post("http://localhost:9099/buyer/login", {
+            .post("http://localhost:9099/customer/login", {
                 password: login.password,
                 user_name: login.user_name,
             })
@@ -43,7 +43,7 @@ function BuyerLogin() {
                     console.log(login.user_name);
                     setLogin({ user_name: '', password: '' });
 
-                    window.location = `/buyer-welcome/${login.user_name}`;
+                    window.location = `/customer-welcome/${login.user_name}`;
 
                 }
                 else {
@@ -69,7 +69,7 @@ function BuyerLogin() {
                     <div className="col-md-4 offset-md-4 " >
                         <div className="login-form bg-light mt-4 p-4 " >
                             <form onSubmit={onSubmit} className="row g-3" >
-                                <h4 className="text-center">Buyer-Login</h4>
+                                <h4 className="text-center">customer-Login</h4>
 
                                 <div className="col-12 d-flex flex-row">
 
@@ -92,7 +92,7 @@ function BuyerLogin() {
                             </form>
                             <hr className="mt-4" />
                             <div className="col-12">
-                                <p className="text-center mb-0">Have not account yet? <a href="/Buyer-reg">Signup</a></p>
+                                <p className="text-center mb-0">Have not account yet? <a href="/Customer-reg">Signup</a></p>
                                 <p className="text-center mb-0"><a href="/forgot-password">Forgotten password?</a></p>
                             </div>
                             {iserror &&
@@ -110,4 +110,4 @@ function BuyerLogin() {
     );
 }
 
-export default customerLogin;
+export default CustomerLogin;

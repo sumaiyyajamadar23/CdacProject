@@ -33,7 +33,7 @@ function CustomerProduct() {
   function handleSearchAll() {
 
     axios
-      .post("http://localhost:9099/buyer/allsearch", {})
+      .post("http://localhost:9099/customer/allsearch", {})
       .then((response) => {
         setList(response.data);
       })
@@ -46,7 +46,7 @@ function CustomerProduct() {
   function handleSearch(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:9099/buyer/search", {
+      .post("http://localhost:9099/customer/search", {
         crop: searchitem.crop,
       })
       .then((response) => {
@@ -84,12 +84,12 @@ function CustomerProduct() {
     }
     else {
       axios
-        .post("http://localhost:9099/buyer-cart/add", {
+        .post("http://localhost:9099/customer-cart/add", {
           customerusername: username,
           art: product.art,
           quantity: selectedquantity.quantity,
           expectedprice: ((product.expected_Price / product.quantity) * selectedquantity.quantity).toFixed(2),
-          farmername: product.farmer.firstname
+          artistname: product.farmer.firstname
         })
         .then((response) => {
           if (response.data === "added_successfully") {

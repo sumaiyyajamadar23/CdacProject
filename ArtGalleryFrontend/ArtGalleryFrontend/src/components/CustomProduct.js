@@ -9,7 +9,7 @@ function CustomProduct()
 
     let user = sessionStorage.getItem('authenticatedUser');
 
-    const [product,setProduct] = useState({ farmer:{user_name: user}, crop: '' , quantity:'' ,expected_Price:''});
+    const [product,setProduct] = useState({ artist:{user_name: user}, art: '' , quantity:'' ,expected_Price:''});
 
     var handleChange = (e) => {
         e.preventDefault();
@@ -21,9 +21,9 @@ function CustomProduct()
     function handleSubmit(){
 
         axios
-        .post("http://localhost:9099/farmer/add-product", {
-            farmer:{user_name: user},
-             crop: product.crop , 
+        .post("http://localhost:9099/artist/add-product", {
+            artist:{user_name: user},
+             art: product.art , 
              quantity: product.quantity ,
              expected_Price: product.expected_Price
         })
