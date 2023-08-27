@@ -46,6 +46,6 @@ public class Admin
 	@Column(name="user_name")
 	private String user_name;
 	
-	
+	//insert into admins values(1,"sam@123","sam","jam","2190","samjam");
 	
 }

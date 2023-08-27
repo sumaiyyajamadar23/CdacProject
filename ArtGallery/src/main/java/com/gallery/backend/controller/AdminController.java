@@ -3,6 +3,7 @@ package com.gallery.backend.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,18 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gallery.backend.entity.Admin;
-import com.gallery.backend.entity.Customer;
 import com.gallery.backend.entity.Artist;
+import com.gallery.backend.entity.Customer;
 import com.gallery.backend.entity.Order;
 import com.gallery.backend.entity.Product;
-import com.gallery.backend.repository.AdminRepo;
-import com.gallery.backend.repository.CustomerCartRepo;
-import com.gallery.backend.repository.CustomerRepo;
-import com.gallery.backend.repository.ArtistRepo;
-import com.gallery.backend.repository.OrderRepo;
-import com.gallery.backend.repository.ProductRepo;
 import com.gallery.backend.service.AdminService;
-
 
 
 @CrossOrigin
@@ -37,6 +31,7 @@ public class AdminController
 	
 	
 	@PostMapping("/login")
+	//@Secured("admin")
 	public String loginUser(@RequestBody Admin admin) {
 		
 	  String message = this.adminservice.adminLogin(admin);
@@ -91,9 +86,5 @@ public class AdminController
 	{
 		adminservice.deleteCustomerByid(id);
 		return "customer deleted ";
-	}
-
-	
-	
-	
+	}	
 }

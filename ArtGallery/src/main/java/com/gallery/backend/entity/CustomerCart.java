@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
@@ -34,10 +36,8 @@ public class CustomerCart
 	@Column(name="art")
 	private String art;
 	
-	
 	@Column(name="quantity")
 	private double quantity;
-	
 	
 	@Column(name="expectedprice")
 	private double expectedprice;
@@ -46,6 +46,10 @@ public class CustomerCart
 	@Column(name="artistname")
 	private String artistname;
 	
+	//@OneTo
+//	private Customer customer;
+	
+	//private Product product;
 	
 	
 }
