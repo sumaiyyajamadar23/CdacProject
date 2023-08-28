@@ -1,10 +1,14 @@
 package com.gallery.backend.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -28,28 +32,20 @@ public class CustomerCart
 	@Column(name="cartid")
 	private int cartid;
 	
-	@NotEmpty
-	@Column(name="customer_username")
-	private String customerusername;
-	
-	@NotEmpty
-	@Column(name="art")
-	private String art;
-	
 	@Column(name="quantity")
-	private double quantity;
+	private int quantity;
 	
-	@Column(name="expectedprice")
-	private double expectedprice;
+//	@NotEmpty
+//	@Column(name="artistname")
+//	private String artistname;
 	
-	@NotEmpty
-	@Column(name="artistname")
-	private String artistname;
+	@ManyToOne
+	@JoinColumn(name="cid")
+	private Customer customer;
 	
-	//@OneTo
-//	private Customer customer;
-	
-	//private Product product;
+	@OneToOne
+	@JoinColumn(name="pid")
+	private Product product;
 	
 	
 }
